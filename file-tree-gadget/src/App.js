@@ -15,8 +15,6 @@ function App() {
 }
 
 const Folder = (props) => {
-  console.log(props);
-
   return (
     <div>
       {props.name}
