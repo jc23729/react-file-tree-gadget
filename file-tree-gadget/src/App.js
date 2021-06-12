@@ -3,10 +3,17 @@
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
-      <h2>Goodbye</h2>
+    
+      <Folder  food = "cake" drink = "coffee"/>
     </div>
   );
+}
+
+const Folder = (props) => {
+  // so we create a variable const name,  now we can manipulate it and pass it with jsx {}
+  console.log(props);
+  const name = 'my_desktop';
+  return <h4>{ name }</h4>
 }
 
 export default App;
