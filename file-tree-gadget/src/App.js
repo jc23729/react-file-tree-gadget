@@ -17,17 +17,21 @@ function App() {
 }
 
 const Folder = (props) => {
+  //so isOpen is set to true becasue its equal to useState true
   const [isOpen, setIsOpen] = useState(true);
-
   const { name, children } = props;
 
-  const handleClick = () => {
-    setIsOpen(false);
-  };
+  const handleClick = () =>
+    //so we want to activate this and make it like a switch, we set it to its opposite 
+    setIsOpen(!isOpen);
+
+
   return (
     <div>
       <span onClick={handleClick}>{name}</span>
-      <div style={{ marginLeft: "17px" }}>{isOpen ? children : null}</div>
+      <div style={{ marginLeft: "17px" }}>
+        {isOpen ? children : null}
+      </div>
     </div>
   );
 };
