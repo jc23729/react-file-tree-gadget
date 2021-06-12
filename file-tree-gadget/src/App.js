@@ -1,7 +1,10 @@
 function App() {
   return (
     <div>
-      <Folder name="Desktop"> some stuff</Folder>
+      <Folder name="Desktop">
+        <h1>Some Stuff</h1>
+        <h3>other things</h3>
+        </Folder>
       <Folder name="Application" />
       <File name="dogs.jpeg" />
       <File name="cats.png" />
