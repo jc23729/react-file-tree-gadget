@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function App() {
   return (
     <div>
-      <Folder name="Desktop" isOpen={true}>
+      <Folder name="Desktop">
         <Folder name="Music">
           <File name="all_star.mp4" />
           <File name="express_file.mp4" />
@@ -17,11 +17,15 @@ function App() {
 }
 
 const Folder = (props) => {
-  const { name, isOpen, children } = props;
+  const [isOpen, setIsOpen] = useState(true);
+  console.log(isOpen);
+  console.log(setIsOpen);
+
+  const { name, children } = props;
   return (
     <div>
-      {props.name}
-      <div style={{ marginLeft: "17px" }}>{isOpen ? children : null}</div>
+      {name}
+      <div style={{ marginLeft: "17px" }}></div>
     </div>
   );
 };
