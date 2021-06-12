@@ -20,7 +20,7 @@ const Folder = (props) => {
     <div>
       {props.name}
       <div style={{ marginLeft: "17px" }}>
-        {props.isOpen ? props.children : null}
+        {isOpen ? children : null}
       </div>
     </div>
   );
