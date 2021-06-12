@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 function App() {
   return (
     <div>
@@ -19,9 +21,7 @@ const Folder = (props) => {
   return (
     <div>
       {props.name}
-      <div style={{ marginLeft: "17px" }}>
-        {isOpen ? children : null}
-      </div>
+      <div style={{ marginLeft: "17px" }}>{isOpen ? children : null}</div>
     </div>
   );
 };
