@@ -42,10 +42,15 @@ const File = (props) => {
   const { name } = props;
   const fileExtension = name.split('.')[1];
   const fileIcons = {
-    mp4: <i class="headphones icon"></i>,
-    jpeg: <i class="file image icon"></i>,
-    png: <i class="file image outline icon"></i>,
+    mp4: 'headphones',
+    jpeg: 'file image',
+    png: 'file image outline',
   };
-  return <div>{name}</div>;
+  return (
+    <div>
+      <i className={`${fileIcons[fileExtension]} icon`}></i>
+      {name}
+    </div>
+  );
 };
 export default App;
