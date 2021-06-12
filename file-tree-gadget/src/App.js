@@ -20,6 +20,7 @@ const Folder = (props) => {
   //so isOpen is set to true becasue its equal to useState true
   const [isOpen, setIsOpen] = useState(true);
   const { name, children } = props;
+  const direction = isOpen ? 'down' : 'right';
 
   const handleClick = () =>
     //so we want to activate this and make it like a switch, we set it to its opposite
@@ -28,7 +29,8 @@ const Folder = (props) => {
   return (
     <div>
       <span onClick={handleClick}>
-        <i className="folder icon"></i>
+        <i className="blue folder icon"></i>
+        <i className={`caret ${direction} icon`}></i>
       </span>
       {name}
       <div style={{ marginLeft: "17px" }}>{isOpen ? children : null}</div>
@@ -37,6 +39,13 @@ const Folder = (props) => {
 };
 
 const File = (props) => {
-  return <div>{props.name}</div>;
+  const { name } = props;
+  const fileExtension = name.split('.')[1];
+  const fileIcons = {
+    mp4: <i class="headphones icon"></i>,
+    jpeg: <i class="file image icon"></i>,
+    png: <i class="file image outline icon"></i>,
+  };
+  return <div>{name}</div>;
 };
 export default App;
