@@ -2,6 +2,10 @@ function App() {
   return (
     <div>
       <Folder name="Desktop">
+        <Folder name="Music">
+          <File name="all_star.mp4" />
+          <File name="express_file.mp4" />
+        </Folder>
         <File name="dogs.jpeg" />
         <File name="cats.png" />
       </Folder>
@@ -14,11 +18,9 @@ const Folder = (props) => {
   console.log(props);
 
   return (
-    <div style={{ border: "2px solid pink" }}>
+    <div>
       {props.name}
-      <div style={{ marginLeft: "17px" }}>
-        {props.children}
-      </div>
+      <div style={{ marginLeft: "17px" }}>{props.children}</div>
     </div>
   );
 };
