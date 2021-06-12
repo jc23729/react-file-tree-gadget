@@ -28,7 +28,7 @@ const Folder = (props) => {
   return (
     <div>
       <span onClick={handleClick}>
-        <i class="folder icon"></i>
+        <i className="folder icon"></i>
       </span>
       {name}
       <div style={{ marginLeft: "17px" }}>{isOpen ? children : null}</div>
