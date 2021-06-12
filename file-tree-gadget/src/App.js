@@ -22,16 +22,16 @@ const Folder = (props) => {
   const { name, children } = props;
 
   const handleClick = () =>
-    //so we want to activate this and make it like a switch, we set it to its opposite 
+    //so we want to activate this and make it like a switch, we set it to its opposite
     setIsOpen(!isOpen);
-
 
   return (
     <div>
-      <span onClick={handleClick}>{name}</span>
-      <div style={{ marginLeft: "17px" }}>
-        {isOpen ? children : null}
-      </div>
+      <span onClick={handleClick}>
+        <i class="folder icon"></i>
+      </span>
+      {name}
+      <div style={{ marginLeft: "17px" }}>{isOpen ? children : null}</div>
     </div>
   );
 };
