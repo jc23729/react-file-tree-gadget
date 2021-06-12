@@ -2,19 +2,18 @@ function App() {
   return (
     <div>
       <Folder name="Desktop">
-        <h3>some stuff</h3>
-        <h4>other thing</h4>
+        <File name="dogs.jpeg" />
+        <File name="cats.png" />
       </Folder>
       <Folder name="Application" />
-      <File name="dogs.jpeg" />
-      <File name="cats.png" />
     </div>
   );
 }
 
 const Folder = (props) => {
   console.log(props);
-  return <div>{props.name}{props.children}</div>
+  const borderStyle = { border: '2px solid pink' };
+  return <div style={borderStyle}>{props.name}{props.children}</div>
 };
 
 const File = (props) => {
