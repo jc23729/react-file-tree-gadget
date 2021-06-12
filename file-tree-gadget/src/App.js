@@ -12,8 +12,15 @@ function App() {
 
 const Folder = (props) => {
   console.log(props);
-  const borderStyle = { border: '2px solid pink' };
-  return <div style={borderStyle}>{props.name}{props.children}</div>
+
+  return (
+    <div style={{ border: "2px solid pink" }}>
+      {props.name}
+      <div style={{ marginLeft: "17px" }}>
+        {props.children}
+      </div>
+    </div>
+  );
 };
 
 const File = (props) => {
