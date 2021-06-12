@@ -2,9 +2,9 @@ function App() {
   return (
     <div>
       <Folder name="Desktop">
-        <h1>Some Stuff</h1>
-        <h3>other things</h3>
-        </Folder>
+        <h3>some stuff</h3>
+        <h4>other thing</h4>
+      </Folder>
       <Folder name="Application" />
       <File name="dogs.jpeg" />
       <File name="cats.png" />
@@ -14,10 +14,10 @@ function App() {
 
 const Folder = (props) => {
   console.log(props);
-  return <h4>{props.name}</h4>;
+  return <div>{props.name}{props.children}</div>
 };
 
 const File = (props) => {
-  return <h5>{props.name}</h5>;
+  return <div>{props.name}</div>;
 };
 export default App;
